@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary-color: #e81f23;
-  --background-color: #0c0a0b;
-  --text-light: #767268;
-  --extra-light: #f3f4f6;
+  /* Cores extraídas do PDF - Página 4 */
+  --primary-color: #f6a31a;      /* Laranja da marca para botões e detalhes */
+  --secondary-color: #e63532;    /* Vermelho da marca (opcional para alertas) */
+  --background-color: #152238;   /* Azul Escuro da marca (substitui o preto) */
+  --text-light: #d1d5db;         /* Cinza claro para textos secundários */
   --white: #ffffff;
+  --extra-light: #f3f4f6;
   --max-width: 1200px;
   --header-font: "Orbitron", sans-serif;
 }
