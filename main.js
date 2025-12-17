@@ -4,12 +4,8 @@ const menuBtnIcon = menuBtn.querySelector("i");
 
 menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("open");
-
   const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute(
-    "class",
-    isOpen ? "ri-close-line" : "ri-menu-4-line"
-  );
+  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-4-line");
 });
 
 navLinks.addEventListener("click", () => {
@@ -23,56 +19,37 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
-ScrollReveal().reveal(".header__container .section__header", {
-  ...scrollRevealOption,
-});
+ScrollReveal().reveal(".header__container .section__header", { ...scrollRevealOption });
+ScrollReveal().reveal(".header__container .section__description", { ...scrollRevealOption, delay: 500 });
+ScrollReveal().reveal(".header__btns", { ...scrollRevealOption, delay: 1000 });
+ScrollReveal().reveal(".service__card", { ...scrollRevealOption, interval: 200 });
 
+// Configuração SWIPER (Galeria)
 const swiper = new Swiper(".swiper", {
-  loop: true,
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
+  initialSlide: 1, 
+  loop: true,
   coverflowEffect: {
-    rotate: 0,
-    depth: 0,
-    modifier: 1,
-    scale: 0.9,
+    rotate: 30,
     stretch: 0,
+    depth: 50,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
   },
 });
 
-ScrollReveal().reveal(".service__container .section__subheader", {
-  ...scrollRevealOption,
-});
-ScrollReveal().reveal(".service__container .section__header", {
-  ...scrollRevealOption,
-  delay: 500,
-});
-
-ScrollReveal().reveal(".service__row:nth-child(2n-1) img", {
-  ...scrollRevealOption,
-  origin: "left",
-});
-ScrollReveal().reveal(".service__row:nth-child(2n) img", {
-  ...scrollRevealOption,
-  origin: "right",
-});
-ScrollReveal().reveal(".service__details h4", {
-  ...scrollRevealOption,
-  delay: 500,
-});
-ScrollReveal().reveal(".service__details p", {
-  ...scrollRevealOption,
-  delay: 1000,
-});
-ScrollReveal().reveal(".service__btn", {
-  ...scrollRevealOption,
-  delay: 1500,
-});
-
 const instagram = document.querySelector(".instagram__images");
-
 const instagramContent = Array.from(instagram.children);
 
 instagramContent.forEach((item) => {
