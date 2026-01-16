@@ -205,7 +205,7 @@ header {
     to right,
     rgba(15, 23, 42, 0.9),
     rgba(15, 23, 42, 0.5)
-  ), url("assets/header.jpg");
+  ), url("assets/header.webp");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -331,7 +331,7 @@ header {
 
 /* --- Banner --- */
 .banner {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("assets/banner.png");
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("assets/header.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
